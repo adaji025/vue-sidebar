@@ -32,6 +32,7 @@ onBeforeMount(() => {
         <div class="font-bold">year:</div>
         <div>{{ car.year }}</div>
       </div>
+      <RouterView />
     </div>
 
     <div v-else>Car not found</div>
