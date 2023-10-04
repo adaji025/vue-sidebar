@@ -1,13 +1,5 @@
-<template lang="">
-    <div>
-        
-    </div>
+<template>
+  <div class="h-screen w-[300px] bg-gray-400">sidebar</div>
 </template>
-<script>
-export default {
-    
-}
-</script>
-<style lang="">
-    
-</style>
+<script setup></script>
+<style></style>
