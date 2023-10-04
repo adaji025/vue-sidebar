@@ -15,7 +15,8 @@ import { RouterView, RouterLink } from "vue-router";
 <style scoped>
 .links {
   padding: 20px;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .links a {
@@ -24,5 +25,6 @@ import { RouterView, RouterLink } from "vue-router";
 .active {
   font-weight: bold;
   color: green;
+  border-bottom: 2px solid green;
 }
 </style>
