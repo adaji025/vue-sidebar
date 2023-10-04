@@ -7,10 +7,6 @@ const cars = ref(carsData);
 
 <template>
   <main class="container">
-    <div class="links">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-    </div>
     <h1>Our cars</h1>
     <div class="cards">
       <div v-for="car in cars" :key="car.id" class="card">
@@ -21,16 +17,7 @@ const cars = ref(carsData);
   </main>
 </template>
 
-<style >
-.container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 800px;
-  margin: 0 auto;
-}
+<style scoped>
 .cards {
   display: flex;
   width: 1000px;
@@ -46,14 +33,6 @@ const cars = ref(carsData);
   margin-right: 15px;
   cursor: pointer;
   margin-bottom: 20px;
-}
-
-.links {
-  padding: 20px;
-}
-
-.links a {
-  margin: 0 5px;
 }
 </style>
 
