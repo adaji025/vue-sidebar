@@ -1,13 +1,9 @@
-<template lang="">
-    <div>
-        
-    </div>
+<template>
+  <div class="container">
+    <h1>The Car</h1>
+  </div>
 </template>
 <script>
-export default {
-    
-}
+export default {};
 </script>
-<style lang="">
-    
-</style>
+<style></style>

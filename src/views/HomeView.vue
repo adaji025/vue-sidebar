@@ -1,19 +1,23 @@
 <script setup>
 import carsData from "../data.json";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const cars = ref(carsData);
 </script>
 
 <template>
   <main class="container">
-    <div class="links">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-    </div>
     <h1>Our cars</h1>
     <div class="cards">
-      <div v-for="car in cars" :key="car.id" class="card">
+      <div
+        v-for="car in cars"
+        :key="car.id"
+        class="card"
+        @click="router.push(`/car/${car.id}`)"
+      >
         <h1>{{ car.make }}</h1>
         <p>{{ car.price }}</p>
       </div>
@@ -21,19 +25,10 @@ const cars = ref(carsData);
   </main>
 </template>
 
-<style >
-.container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 800px;
-  margin: 0 auto;
-}
+<style scoped>
 .cards {
   display: flex;
-  width: 1000px;
+  max-width: 1000px;
   flex-wrap: wrap;
   margin-top: 50px;
   justify-content: center;
@@ -46,14 +41,6 @@ const cars = ref(carsData);
   margin-right: 15px;
   cursor: pointer;
   margin-bottom: 20px;
-}
-
-.links {
-  padding: 20px;
-}
-
-.links a {
-  margin: 0 5px;
 }
 </style>
 
