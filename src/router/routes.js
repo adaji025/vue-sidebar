@@ -12,4 +12,14 @@ export default [
       },
     ],
   },
+  {
+    path: "/about",
+    name: "about",
+    component: () => import("../views/AboutView.vue"),
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "notFound",
+    component: () => import("../views/NotFoundView.vue"),
+  },
 ];
